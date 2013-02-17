@@ -1,0 +1,63 @@
+<html>
+<head>
+<link rel="shortcut icon"
+	href=""
+	type="image/x-icon" />
+<title>Unarto Org Chart	</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<div id="menu">
+		<div id="toggler"><i rel="tooltip" data-placement="left" data-original-title="Hide" class="toggle-dir icon-chevron-right icon-white"></i></div>
+		<div id="main-menu">
+			<ul>
+				<li shape="rect" data-id="rectangle"></li>
+				<li shape="circ" data-id="circle"></li>
+			</ul>
+			<br />
+		</div>
+	</div>
+
+	<div id="chart"></div>
+
+	<script id="tmpl-rectangle" type="text/x-jquery-template"> 
+		<div class="item-rect" rel="popover" shape="rect">
+			<i rel="tooltip" data-placement="left" data-original-title="Edit" class="open-fill icon-edit"></i>
+			<p class="item-name">Name</p>
+			<input class="item-text" type="text" placeholder="Name" value="" size="10" style="display:none"></input>
+			<p class="role-name">Role</p>
+			<input class="role-text" type="text" placeholder="Role" value="" size="10" style="display:none"></input>		
+			<br/>
+			<div class="fill">
+				<i rel="tooltip" data-placement="left" data-original-title="Close" class="close-fill icon-remove-circle"></i>
+				<i rel="tooltip" data-placement="left" data-original-title="Close" class="add-fill icon-plus-sign"></i>
+				<div class="span3"><input type="text" value="Name" class="name uneditable-input" style="width:50px">:<input type="text" value="" class="name" style="width:140px"></div>
+				<div class="span3"><input type="text" value="Role" class="name uneditable-input" style="width:50px">:<input type="text" value="" class="name" style="width:140px"></div>
+			</div>
+		</div>
+	</script>
+
+	<script id="tmpl-circle" type="text/x-jquery-template"> 
+		<div class="item-circ" rel="popover" shape="circ" >
+			<p class="item-name">Name</p>
+			<input class="item-text" type="text" placeholder="Name" value="" size="10" style="display:none"></input>
+			<p class="role-name">Role</p>
+			<input class="role-text" type="text" placeholder="Role" value="" size="10" style="display:none"></input>		
+			<br/>
+		</div>
+	</script>
+
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jqueryui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tmpl.js"></script>
+	<script type="text/javascript" src="js/jquery.jsPlumb-1.2.6-all.js"></script>
+	<script type="text/javascript" src="js/jsPlumb-flowchart-RC1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+
+	<script type="text/javascript" src="js/controller.js"></script>
+	<script type="text/javascript" src="js/org.js"></script>
+</body>
+</html>

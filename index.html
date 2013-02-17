@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<title>Unarto</title>
+<style>
+html, body { height:100% }
+#menu { height:100% }
+#main { height: 100% }
+</style>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body data-demo-id="stateMachineDemo" data-library="jquery">
+	<div id="menu">
+		<div id="toggler"><i rel="tooltip" data-placement="left" data-original-title="Hide" class="toggle-dir icon-chevron-right icon-white"></i></div>
+		<div id="main-menu">
+			<ul>
+				<li shape="rect" data-id="rectangle"></li>
+				<li shape="circ" data-id="circle"></li>
+			</ul>
+			<br />
+		</div>
+	</div>
+
+	<div id="main">
+		<!-- 
+			<div class="w" id="opened">begin<div class="ep"></div></div>
+			<div class="w" id="phone1">phone interview 1<div class="ep"></div></div>
+			<div class="w" id="phone2">phone interview 2<div class="ep"></div></div>
+			<div class="w" id="inperson">in person<div class="ep"></div></div>
+			<div class="w" id="rejected">rejected<div class="ep"></div></div>	
+		 -->
+	</div>
+
+	<script id="tmpl-rectangle" type="text/x-jquery-template"> 
+		<div class="w">
+			<p>Rectangle</p>
+			<div class="ep"></div>
+		</div>
+	</script>
+	
+	<script id="tmpl-circle" type="text/x-jquery-template"> 
+		<div class="w">
+			<p>Circle</p>
+			<div class="ep"></div>
+		</div>
+	</script>
+	
+	<script type="text/javascript" src="js/jquery-1.8.1-min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.23-min.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+
+	<script src="js/jsBezier-0.5.js"></script>
+	<script src="js/jsPlumb-util-1.4.0-RC1.js"></script>
+	<script src="js/jsPlumb-dom-adapter-1.4.0-RC1.js"></script>
+	<script src="js/jsPlumb-1.4.0-RC1.js"></script>
+	<script src="js/jsPlumb-anchors-1.4.0-RC1.js"></script> 
+	<script src="js/jsPlumb-endpoint-1.4.0-RC1.js"></script>  
+	<script src="js/jsPlumb-connection-1.4.0-RC1.js"></script>
+	<script src="js/jsPlumb-defaults-1.4.0-RC1.js"></script>
+	<script src="js/jsPlumb-connectors-statemachine-1.4.0-RC1.js"></script>
+	<script src="js/jsPlumb-connectors-flowchart-1.4.0-RC1.js"></script>        
+	<script src="js/jsPlumb-renderers-svg-1.4.0-RC1.js"></script>
+	<script src="js/jsPlumb-renderers-canvas-1.4.0-RC1.js"></script>
+	<script src="js/jsPlumb-renderers-vml-1.4.0-RC1.js"></script>
+	<script src="js/jquery.jsPlumb-1.4.0-RC1.js"></script>
+	<script src="js/jquery.tmpl.js"></script>
+
+	<script type="text/javascript" src="js/connectioncontroller.js"></script>
+	<script type="text/javascript" src="js/org.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+	
+	<script type="text/javascript" src="js/init-list.js"></script>
+	<script type="text/javascript" src="js/init-helper-jquery.js"></script>
+		
+</body>
+</html>
