@@ -52,12 +52,12 @@
 				jsPlumb.makeSource($(e), {
 					parent:p,				
 					anchor:"Continuous",
-					connector:[ "Flowchart", { stub:[20, 30], gap:5 } ],
+					connector:[ "Flowchart", {  gap:5 } ],
 					connectorStyle:{ strokeStyle:nextColour(), lineWidth:2 },
-					maxConnections:5,
+					/*maxConnections:5,
 					onMaxConnections:function(info, e) {
 						alert("Maximum connections (" + info.maxConnections + ") reached");
-					}
+					}*/
 				});
 			});
 
@@ -66,14 +66,14 @@
 			// this listener changes the paint style to some random new color and also sets the connection's internal
 			// id as the label overlay's text.
             jsPlumb.bind("connection", function(info) {
-				info.connection.setPaintStyle({strokeStyle:nextColour()});
+				info.connection.setPaintStyle({strokeStyle:"Black"});
                // info.connection.getOverlay("label").setLabel(info.connection.id);
             });
 
 			// initialise all '.w' elements as connection targets.
             jsPlumb.makeTarget($(".w"), {
 				dropOptions:{ hoverClass:"dragHover" },
-				anchor:"Continuous"				
+				anchor:"AutoDefault"				
 			});
 			
 			// and finally, make one connection

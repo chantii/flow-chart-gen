@@ -11,7 +11,16 @@ $(function() {
 	$(".toggle-dir").tooltip();
 	
 	$("body[rel='tooltip']").tooltip();
+
 		
+	$(".getxml").click(function(){
+		alert("get cxml");
+		var c = jsPlumb.getConnections();
+		console.log(c);
+	});
+	
+	
+	
 	$("#toggler").click(function(){
 		$("#main-menu").toggle();
 		if(isToolBarClosed == 0){
@@ -26,14 +35,23 @@ $(function() {
 			isToolBarClosed = 0;
 		}
 	});
+
+	$("body").on("mouseover",".w",function(){
+		$(this).find(".ep").stop().show();
+	});
 	
-	$("body").on("click",".item-name",function(){
+	$("body").on("mouseleave",".w",function(){
+		$(this).find(".ep").fadeOut(2000);
+	});
+	
+	/*$("body").on("click",".item-name",function(){
 		$(this).hide();
 		$(this).next().val($(this).text());
 		$(this).next().show();
 		$(this).next().focus();
 		$(this).next().val("");
-	});
+	});*/
+	
 	
 	$("body").on("focusout",".item-text",function(){
 		$(this).hide();
@@ -45,13 +63,13 @@ $(function() {
 		$(this).prev().show();
 	});
 	
-	$("body").on("click",".role-name",function(){
+	/*$("body").on("click",".role-name",function(){
 		$(this).hide();
 		$(this).next().val($(this).text());
 		$(this).next().show();
 		$(this).next().focus();
 		$(this).next().val("");
-	});
+	});*/
 	
 	$("body").on("focusout",".role-text",function(){
 		$(this).hide();

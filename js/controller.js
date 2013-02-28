@@ -38,9 +38,21 @@
 					zIndex:50
 				});
 				
+				$("#menu").draggable({
+					zIndex:100
+				});
+				
+				
+				
 				$("#main").droppable({
 					drop:function(e,ui){
 						var id = ui.draggable.data("id");
+						
+						// $(this).attr("id") -- Droppable Id
+						// ui.draggable.attr("id") -- Draggable Id
+						
+						//alert(ui.draggable.attr("id"));
+						
 						
 						if(id == "rectangle" || id == "circle"){
 							var d = $("#tmpl-" + id).tmpl();
@@ -54,9 +66,9 @@
 								var p = $(e).parent();
 								jsPlumb.makeSource($(e), {
 									parent:p,				
-									anchor:"Continuous",
-									connector:[ "Flowchart", { stub:[20, 30], gap:5 } ],
-									connectorStyle:{ strokeStyle:nextColour(), lineWidth:2 },
+									anchor:"AutoDefault",
+									connector:[ "Flowchart", { gap:0 } ],
+									connectorStyle:{ strokeStyle:"black", lineWidth:4 },
 									/*maxConnections:5,
 									onMaxConnections:function(info, e) {
 										alert("Maximum connections (" + info.maxConnections + ") reached");
@@ -66,7 +78,7 @@
 							
 							jsPlumb.makeTarget(d, {
 								dropOptions:{ hoverClass:"dragHover" },
-								anchor:"Continuous"				
+								anchor:"AutoDefault"				
 							});
 					}
 					}

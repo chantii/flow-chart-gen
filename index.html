@@ -3,8 +3,7 @@
 <head>
 <title>Unarto</title>
 <style>
-html, body { height:100% }
-#menu { height:100% }
+html, body { height:100% } 
 #main { height: 100% }
 </style>
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -12,13 +11,16 @@ html, body { height:100% }
 </head>
 <body data-demo-id="stateMachineDemo" data-library="jquery">
 	<div id="menu">
-		<div id="toggler"><i rel="tooltip" data-placement="left" data-original-title="Hide" class="toggle-dir icon-chevron-right icon-white"></i></div>
+<!-- 		<div id="toggler"><i rel="tooltip" data-placement="left" data-original-title="Hide" class="toggle-dir icon-chevron-right icon-white"></i></div>
+ -->	
 		<div id="main-menu">
+			<b>Tool Panel</b>
 			<ul>
-				<li shape="rect" data-id="rectangle"></li>
-				<li shape="circ" data-id="circle"></li>
+				<li shape="rect" data-id="rectangle">Manager</li>
+				<li shape="circ" data-id="circle">Employee</li>
 			</ul>
-			<br />
+			<hr/>
+			<button class="btn btn-primary getxml"> Get XML </button>
 		</div>
 	</div>
 
@@ -33,16 +35,42 @@ html, body { height:100% }
 	</div>
 
 	<script id="tmpl-rectangle" type="text/x-jquery-template"> 
-		<div class="w">
-			<p>Rectangle</p>
-			<div class="ep"></div>
+		<div class="w" rel="popover" shape="rect">
+			<i rel="tooltip" data-placement="left" data-original-title="Edit" class="open-fill icon-edit"></i>
+			<div class="ep eptop"></div>
+			<div class="ep epright"></div>
+			<div class="ep epdown"></div>
+			<div class="ep epleft"></div>
+			<div class="breif">
+				<p class="item-name">Name</p>
+				<p class="role-name">Manager</p>
+			</div>
+			<div class="fill">
+				<i rel="tooltip" data-placement="left" data-original-title="Close" class="close-fill icon-remove-circle"></i>
+				<i rel="tooltip" data-placement="left" data-original-title="Close" class="add-fill icon-plus-sign"></i>
+				<div class="span3"><input type="text" value="Name" class="name uneditable-input" style="width:50px">:<input type="text" value="" class="name" style="width:140px"></div>
+				<div class="span3"><input type="text" value="Role" class="name uneditable-input" style="width:50px">:<input type="text" value="" class="name" style="width:140px"></div>
+			</div>
 		</div>
 	</script>
 	
 	<script id="tmpl-circle" type="text/x-jquery-template"> 
-		<div class="w">
-			<p>Circle</p>
-			<div class="ep"></div>
+		<div class="w" rel="popover" shape="circ">
+			<i rel="tooltip" data-placement="left" data-original-title="Edit" class="open-fill icon-edit"></i>
+			<div class="ep eptop"></div>
+			<div class="ep epright"></div>
+			<div class="ep epdown"></div>
+			<div class="ep epleft"></div>
+			<div class="breif">
+				<p class="item-name">Name</p>
+				<p class="role-name">Employee</p>
+			</div>
+			<div class="fill">
+				<i rel="tooltip" data-placement="left" data-original-title="Close" class="close-fill icon-remove-circle"></i>
+				<i rel="tooltip" data-placement="left" data-original-title="Close" class="add-fill icon-plus-sign"></i>
+				<div class="span3"><input type="text" value="Name" class="name uneditable-input" style="width:50px">:<input type="text" value="" class="name" style="width:140px"></div>
+				<div class="span3"><input type="text" value="Role" class="name uneditable-input" style="width:50px">:<input type="text" value="" class="name" style="width:140px"></div>
+			</div>
 		</div>
 	</script>
 	
